@@ -63,6 +63,7 @@ const FetchInfo = async () => {
         const run = async ()=>{
             for (let i = 0; i < events.length; i++) {
                 // fetch events 
+                
                 value1.push( JSON.stringify(events[i].args._user, (key, value) =>
                     typeof value === "bigint" ? value.toString() : value
                 ))
