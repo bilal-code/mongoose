@@ -153,7 +153,8 @@ const userRoutes = router.get("/", async (req, res) => {
         console.log("Connected to MongoDB");
         const users = await newUser.find();
         res.json(users);
-        res.send(users)
+        res.send(users);
+        
     } catch (err) {
       console.error(err.message);
       res.status(500).send("Server error");
